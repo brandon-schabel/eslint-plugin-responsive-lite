@@ -37,7 +37,6 @@ module.exports = {
   create(context) {
     return {
       JSXAttribute(node) {
-        console.log('hereeee, node')
         if (node.name.name === 'classes') {
           const string = node.value.value
 
@@ -47,5 +46,10 @@ module.exports = {
         }
       },
     }
+  },
+
+  meta: {
+    docs: { url: 'test.com' },
+    type: 'suggestion',
   },
 }
